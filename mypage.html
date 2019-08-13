@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head><img src="img/header.png"  alt="header for my page"/></head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $("body").click
+            (
+            function(e)
+            {
+                if(e.target.className !== "form_wrapper")
+                {
+                $(".form_wrapper").hide();
+                }
+            }
+            );
+    </script>
+    <style>
+            body {
+            background-color: lightgrey;
+            }
+            .boxed {
+                width:100px;
+                height:100px;
+                 background: grey;
+            }
+    </style>
+    <body>
+            <div data-role="page" id="mypage">
+            <div style="text-align:left">
+                    <div class="nav"><a class="active" href="blog.html"><h4>Blog</a></h4>
+					<div class="nav"><a class="active" href="index.html"><h4>Home</a></h4>
+            </div>  
+        <h4>My Page</h4>
+            <script src = "js/greeting.js"></script>
+
+            <div class="form_wrapper">
+            <p>This is your page. As you input your carb intake the total will update. tap here to dismiss</p>
+            </div>
+
+
+                Carb Intake 1 : <input onblur="findTotal()" type="text" name="carbintake" id="ci1"/><br>
+                Carb Intake 2 : <input onblur="findTotal()" type="text" name="carbintake" id="ci2"/><br>
+                Carb Intake 3 : <input onblur="findTotal()" type="text" name="carbintake" id="ci3"/><br>
+                Carb Intake 4 : <input onblur="findTotal()" type="text" name="carbintake" id="ci4"/><br>
+                <br><br>
+                <h2>
+                Total : <input type="text" name="total" id="total"/>
+                </h2>
+                
+                    <script type="text/javascript">
+                function findTotal(){
+                    var arr = document.getElementsByName('carbintake');
+                    var total=0;
+                    for(var i=0;i<arr.length;i++){
+                        if(parseFloat(arr[i].value))
+                            total += parseFloat(arr[i].value);
+                    }
+                    document.getElementById('total').value = total;
+                }
+                
+                    </script>
+                    <br>
+                    </br>
+
+                    <div class="container">
+                  <br><br>
+            <div class="row">
+            <div>
+            <form class="newmeal" action="newmeal.php" method="post"> <!--Haven't created a database for this-->
+            <!-- meal name-->
+            <div class="row">
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name">Meal 1 name</label>
+            </div>
+            <!-- food item option 1 -->
+            <div class="row">
+                <input id="food1"  name="item1" type="text" class="validate">
+                <label for="food1">Food item 1 (required)</label>
+            </div>
+            <!-- food item option 2 -->
+            <div class="row">
+                <input id="food2"  name="item2" type="text" class="validate">
+                <label for="food2">Food item 2</label>
+            </div>
+            <!-- food item option 3 -->
+            <div class="row">
+                <input id="food3"  name="item3" type="text" class="validate">
+                <label for="food3">Food item 3</label>
+            </div>
+            <!-- food item option 4 -->
+            <div class="row">
+                <input id="food4"  name="item4" type="text" class="validate">
+                <label for="food4">Food item 4</label>
+            </div>
+            <!-- food item option 5 -->
+            <div class="row">
+                <input id="food5"  name="item5" type="text" class="validate">
+                <label for="food5">Food item 5</label>
+            </div>
+            <!-- save meal button -->
+                <button class="btn" type="submit" name="submit">Save Meal
+            </button>
+            </form>
+            </div>
+            </div>
+            </div>
+            
+            <br>
+        </br>
+
+        <div class="container">
+                <br><br>
+          <div class="row">
+          <div>
+          <form class="newmeal" action="newmeal.php" method="post"> <!--Haven't created a database for this-->
+          <!-- meal name-->
+          <div class="row">
+              <input id="name" name="name" type="text" class="validate">
+              <label for="name">Meal 2 name</label>
+          </div>
+          <!-- food item option 1 -->
+          <div class="row">
+              <input id="food1"  name="item1" type="text" class="validate">
+              <label for="food1">Food item 1 (required)</label>
+          </div>
+          <!-- food item option 2 -->
+          <div class="row">
+              <input id="food2"  name="item2" type="text" class="validate">
+              <label for="food2">Food item 2</label>
+          </div>
+          <!-- food item option 3 -->
+          <div class="row">
+              <input id="food3"  name="item3" type="text" class="validate">
+              <label for="food3">Food item 3</label>
+          </div>
+          <!-- food item option 4 -->
+          <div class="row">
+              <input id="food4"  name="item4" type="text" class="validate">
+              <label for="food4">Food item 4</label>
+          </div>
+          <!-- food item option 5 -->
+          <div class="row">
+              <input id="food5"  name="item5" type="text" class="validate">
+              <label for="food5">Food item 5</label>
+          </div>
+          <!-- save meal button -->
+              <button class="btn" type="submit" name="submit">Save Meal
+          </button>
+          </form>
+          </div>
+          </div>
+          </div>
+
+          <br>
+        </br>
+
+        <div class="container">
+                <br><br>
+          <div class="row">
+          <div>
+          <form class="newmeal" action="newmeal.php" method="post"> 
+          <!-- meal name-->
+          <div class="row">
+              <input id="name" name="name" type="text" class="validate">
+              <label for="name">Meal 3 name</label>
+          </div>
+          <!-- food item option 1 -->
+          <div class="row">
+              <input id="food1"  name="item1" type="text" class="validate">
+              <label for="food1">Food item 1 (required)</label>
+          </div>
+          <!-- food item option 2 -->
+          <div class="row">
+              <input id="food2"  name="item2" type="text" class="validate">
+              <label for="food2">Food item 2</label>
+          </div>
+          <!-- food item option 3 -->
+          <div class="row">
+              <input id="food3"  name="item3" type="text" class="validate">
+              <label for="food3">Food item 3</label>
+          </div>
+          <!-- food item option 4 -->
+          <div class="row">
+              <input id="food4"  name="item4" type="text" class="validate">
+              <label for="food4">Food item 4</label>
+          </div>
+          <!-- food item option 5 -->
+          <div class="row">
+              <input id="food5"  name="item5" type="text" class="validate">
+              <label for="food5">Food item 5</label>
+          </div>
+          <!-- save meal button -->
+              <button class="btn" type="submit" name="submit">Save Meal
+          </button>
+          </form>
+          </div>
+          </div>
+          </div>
+    
+          <li><a href="logout.php"><i class= "blue-text" size="30">exit to home</i>Log out</a></li>
+        </ul>
+
+        
+    
+    </body>
+</html>
+
+

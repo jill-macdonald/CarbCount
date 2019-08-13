@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head><img src="img/header.png"  alt="header and logo"/></head>
+  <meta charset="UTF-8">
+    <style>
+          body {
+                    background-color: lightgrey;
+            }
+
+        </style>
+    <body>
+             <div style="text-align:left">
+            <div class="nav"><a class="active" href="mypage.html"><h4>My Page</a></h4>
+			<div class="nav"><a class="active" href="index.html"><h4>Home</a></h4>
+            </div>  
+            <h1>Blog</h1>
+            <p>this is the live blog where users can post updates and communicate with each other</p> 
+        
+        <form id = "form1">
+        Name: <input name = "name" type = "text" size = "20" id = "text1"/>
+        Message: <input name = "message" type = "text" size ="20" id = "text2"/>
+         </form>
+
+        <button onclick="outputdisplayname()">Display</button>
+
+        <div id="messages"> </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript">
+ 
+  </script>
+        <script>
+          
+          function outputdisplayname(){
+            var x, y, z;
+            x = document.getElementById('form1');
+            y = x.elements["name"].value;
+            z = x.elements["message"].value;
+
+            
+            newmsg = "<h4> "+ y +" </h4> <p> "+ z +" </p>";
+          document.getElementById("messages").innerHTML += newmsg;
+}
+        </script>
+
+
+        </body>
+</html>
