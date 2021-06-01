@@ -14,16 +14,16 @@ $sql="INSERT INTO user
 (
 email,
 password,
-firstName,
-lastName
+firstname,
+lastname
 )
 
 VALUES
 (
 '".$_POST["email"]."',
 '".$_POST["password"]."',
-'".$_POST["firstName"]."',
-'".$_POST["lastName"]."'
+'".$_POST["firstname"]."',
+'".$_POST["lastname"]."'
 )
 ";
 

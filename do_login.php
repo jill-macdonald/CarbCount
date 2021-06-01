@@ -1,9 +1,9 @@
 <?php	/*check for valid login details */
 include("_config.php");
 debug($_REQUEST);
-$username=$_POST['username'];	$password=$_POST['password'];
+$email=$_POST['email'];	$password=$_POST['password'];
 $sql="SELECT COUNT(id) AS matches FROM user
-	WHERE username='$username'
+	WHERE email='$email'
 	AND password='$password'";
 print($sql);
 
