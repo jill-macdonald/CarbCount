@@ -12,24 +12,18 @@ print_r($_POST);
 
 $sql="INSERT INTO user
 (
-username,
-password,
-title,
-forename,
-surname,
 email,
-phone_no
+password,
+firstName,
+lastName
 )
 
 VALUES
 (
-'".$_POST["username"]."',
-'".$_POST["password"]."',
-'".$_POST["title"]."',
-'".$_POST["forename"]."',
-'".$_POST["surname"]."',
 '".$_POST["email"]."',
-'".$_POST["phone_no"]."'
+'".$_POST["password"]."',
+'".$_POST["firstName"]."',
+'".$_POST["lastName"]."'
 )
 ";
 
