@@ -10,7 +10,7 @@ print_r($_POST);
 
 
 
-$sql="INSERT INTO meal
+/* $sql="INSERT INTO meal
 (
 name,
 item1,
@@ -28,6 +28,24 @@ VALUES
 '".$_POST["item3"]."',
 '".$_POST["item4"]."',
 '".$_POST["item5"]."'
+)
+";
+ */
+
+$sql="INSERT INTO meal
+(
+calories,
+carbs,
+protein,
+fat
+)
+
+VALUES
+(
+'".$_POST["calories"]."',
+'".$_POST["carbs"]."',
+'".$_POST["protein"]."',
+'".$_POST["fat"]."'
 )
 ";
 
