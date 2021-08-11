@@ -1,4 +1,3 @@
-<!--Jillian MacDonald-->
 <?php
 /*
 file to insert a new user into my database
